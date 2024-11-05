@@ -1,8 +1,9 @@
-
-def main():
-    #Tu código va aquí. Mantén la indentación
-    pass # borra esta línea cuando con inicies tu código
+  
+#Función menú 
+def menu():
+    while True: 
+        opcion = int(input("¿Qué desea realizar? \n1. \n2. \n3. \n4. s"))
 
 
 if __name__ == "__main__":
-    main()
+    menu()
