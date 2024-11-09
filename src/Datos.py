@@ -193,17 +193,16 @@ def ruta_listar():
 def men_arch():
     while True: 
         opcion_arch = input("Seleccione el número de la opción que desea realizar. \n1. Listar archivos en la ruta actual  \n2. Ingresar una ruta donde listar archivos \n3. Menú principal")
-        if opcion_arch == 1:
+        if opcion_arch == '1':
             listar()
-        elif opcion_arch == 2:
+        elif opcion_arch == '2':
             ruta_listar()
-        elif opcion_arch == 3:
+        elif opcion_arch == '3':
             print("Regresando al menú principal")
             break
         else:
             print("Opción inválida. Seleccione una correcta")
             
-
 
 #Función menú principal 
 def menu():
@@ -221,9 +220,7 @@ def menu():
     else:
         print("Ingrese una opción correcta")
 
-            
-
-
+        
 
 if __name__ == "__main__":
     menu()
