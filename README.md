@@ -4,4 +4,9 @@
 ## Documentación del proyecto
 Nombre:  Sara Lucía Jara Jaramillo
 ID:  000540483
----
+
+# Video 
+
+
+Se usó IA para corregir funciones y para cálculos en las estadísticas y gráficas
+
