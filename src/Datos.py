@@ -129,21 +129,24 @@ def grafica(archivo_csv):
             if columna in encabezados: 
                 print("Columna encontrada")
                 indice_columna = encabezados.index(columna)
+                
                 for fila in lector: 
-                    try: 
+                    try:
                         valor = float(fila[indice_columna])
                         info.append(valor)
                     except ValueError:
                         print (f"El valor '{fila[indice_columna]}' de la fila no es un número y será ignorado")
-                        columna_x = input("Ingrese el nombre para el eje x:")
-                        columna_y = input("Ingrese el nombre del eje y: ")         
-                        if info: 
-                          plt.plot(info)
-                          plt.title("Gráfica de la columna '{columna}' ")
-                          plt.xlabel(columna_x)
-                          plt.ylabel(columna_y)
-                          plt. show()
-                        else:
+                        
+                columna_x = input("Ingrese el nombre para el eje x:")
+                columna_y = input("Ingrese el nombre del eje y: ")         
+                        
+                if info: 
+                    plt.plot(info)
+                    plt.title(f"Gráfica de la columna '{columna}' ")
+                    plt.xlabel(columna_x)
+                    plt.ylabel(columna_y)
+                    plt. show()
+                else:
                             print ("No hay datos numéricos para graficar la columna ")
             else: 
                 print("Columna no encontrada. Verifique e intente nuevamente")
@@ -154,18 +157,17 @@ def grafica(archivo_csv):
 def men_arch_csv():
     while True: 
         opcion_csv = input("Seleccione el número de la opción que desea realizar. \n1. Mostrar 15 primeras filas \n2. Calcular estadísiticas \n3. Graficar columna  \n4. Menú principal").strip()
-        archivo_csv = input("Ingrese la rutal del archivo").strip('"').strip("'")
-        if opcion_csv == 1:
-            leer_filas(archivo_csv)
-        elif opcion_csv == 2:
-            cal_est(archivo_csv)
-        elif opcion_csv == 3:
-            grafica(archivo_csv)
-        elif opcion_csv == 4:
+        if opcion_csv != 4:
+            archivo_csv = input("Ingrese la ruta del archivo").strip('"').strip("'")
+            if opcion_csv == '1':
+                leer_filas(archivo_csv)
+            elif opcion_csv == '2':
+                cal_est(archivo_csv)
+            elif opcion_csv == '3':
+                grafica(archivo_csv)
+        else: 
             print("Regresando al menú principal")
             break
-        else: 
-            print("Opción inválida. Seleccione una correcta")
 
 #Funciones archivos
 
