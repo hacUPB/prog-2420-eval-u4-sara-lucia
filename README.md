@@ -6,7 +6,7 @@ Nombre:  Sara Lucía Jara Jaramillo
 ID:  000540483
 
 # Video 
-
+https://youtu.be/BNHPqlE56lU
 
 Se usó IA para corregir funciones y para cálculos en las estadísticas y gráficas
 
